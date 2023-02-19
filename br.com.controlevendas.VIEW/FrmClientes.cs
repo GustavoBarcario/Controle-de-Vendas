@@ -4,14 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Controle_de_Vendas.br.com.controlevendas.VIEW
-{
+{ 
     public partial class FrmClientes : Form
     {
         public FrmClientes()
@@ -38,7 +40,15 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
 
             ClienteDAO dao = new ClienteDAO();
             dao.cadastrarCliente(obj);
-            
+
+        }
+
+        private void FrmClientes_Load(object sender, EventArgs e)
+        {
+            ClienteDAO dao = new ClienteDAO();
+
+            dgvCliente.DataSource = dao.listarClientes();
+
 
         }
     }

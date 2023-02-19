@@ -1,5 +1,7 @@
 ﻿using Controle_de_Vendas.br.com.controlevendas.conexao;
 using Controle_de_Vendas.br.com.controlevendas.model;
+using System.Data;
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -49,6 +51,32 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
                 MessageBox.Show("Aconteceu um erro" + erro);
             }
 
+        }
+        #endregion
+
+        #region Listar Clientes
+        public DataTable listarClientes()
+        {
+            try
+            {
+                DataTable tabeleCliente = new DataTable();
+                string sql = "select * from tb_clientes";
+
+                SqlCommand executacmd = new SqlCommand(sql, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                SqlDataAdapter da = new SqlDataAdapter(executacmd);
+                da.Fill(tabeleCliente);
+                return tabeleCliente;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando no SQL" + erro);
+                return null;
+            }
         }
         #endregion
     }

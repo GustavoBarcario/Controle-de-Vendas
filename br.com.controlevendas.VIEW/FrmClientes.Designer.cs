@@ -553,6 +553,7 @@
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
+            this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabClientes.ResumeLayout(false);
