@@ -5,13 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BB48FFEE-EB9B-43A6-B504-E0FDCAD48DB4}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Controle_de_Vendas</RootNamespace>
     <AssemblyName>Controle de Vendas</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -67,10 +68,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="br.com.controlevendas.VIEW\FrmClientes.cs">
+    <Compile Include="br.com.controlevendas.conexao\ConnectionFactory.cs" />
+    <Compile Include="br.com.controlevendas.dao\ClienteDAO.cs" />
+    <Compile Include="br.com.controlevendas.model\Cliente.cs" />
+    <Compile Include="br.com.controlevendas.view\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.controlevendas.VIEW\FrmClientes.Designer.cs">
+    <Compile Include="br.com.controlevendas.view\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -81,7 +85,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="br.com.controlevendas.VIEW\FrmClientes.resx">
+    <EmbeddedResource Include="br.com.controlevendas.view\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -106,11 +110,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="br.com.controlevendas.CONEXAO\" />
-    <Folder Include="br.com.controlevendas.DAO\" />
-    <Folder Include="br.com.controlevendas.MODEL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
       <Visible>False</Visible>

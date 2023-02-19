@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controle_de_Vendas.br.com.controlevendas.VIEW;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Controle_de_Vendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmClientes());
         }
     }
 }
