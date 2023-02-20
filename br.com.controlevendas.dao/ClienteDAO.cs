@@ -44,6 +44,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
                 executacmd.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente cadastrado com sucesso!");
+                conexao.Close();
             }
             catch (System.Exception erro)
             {
@@ -59,7 +60,9 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
         {
             try
             {
-                string sql = @"update tb_clientes set (@nome=nome,@rg=rg,#cpf=cpf,@email=email,@telefone=telefone,@celular=celular,@cep=cep,@endereco=endereco,@numero=numero,@complemento=complemento,@bairro=bairro,@cidade=cidade,@estado=estado)
+                string sql = @"update tb_clientes set nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,
+                celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
+                cidade=@cidade,estado=@estado
                 where id = @id";
 
                 SqlCommand executacmd = new SqlCommand(sql, conexao);
@@ -83,6 +86,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
                 executacmd.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente alterado com sucesso!");
+                conexao.Close();
             }
             catch (System.Exception erro)
             {
@@ -107,6 +111,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
                 executacmd.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente excluido com sucesso!");
+                conexao.Close();
             }
             catch (System.Exception erro)
             {
@@ -132,6 +137,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
                 SqlDataAdapter da = new SqlDataAdapter(executacmd);
                 da.Fill(tabeleCliente);
                 return tabeleCliente;
+                
 
             }
             catch (Exception erro)
