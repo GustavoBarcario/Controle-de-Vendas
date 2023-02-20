@@ -6,9 +6,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -47,6 +49,10 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
+            string conteudo = mskCPF.Text;
+            conteudo = conteudo.Replace(",", ".");
+            mskCPF.Text = conteudo;
+
             ClienteDAO dao = new ClienteDAO();
 
             dgvCliente.DataSource = dao.listarClientes();
@@ -109,6 +115,34 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
             dao.alterarCliente(obj);
 
             dgvCliente.DataSource = dao.listarClientes();
+        }
+
+        private void btnCEP_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(mskCEP.Text))
+            {
+                using (var ws = new WSCorreios.AtendeClienteClient())
+                {
+                    try
+                    {
+                        var endereco = ws.consultaCEP(mskCEP.Text.Trim());
+                        txtBairro.Text = endereco.bairro;
+                        txtCidade.Text = endereco.cidade;
+                        cbUF.Text = endereco.uf;
+                        txtEndereco.Text = endereco.end;
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Informe um CEP válido!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
