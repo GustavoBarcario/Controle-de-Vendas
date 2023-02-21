@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCEP = new System.Windows.Forms.Button();
             this.cbUF = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnCEP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -148,6 +148,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Pessoais";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnCEP
+            // 
+            this.btnCEP.Location = new System.Drawing.Point(834, 24);
+            this.btnCEP.Name = "btnCEP";
+            this.btnCEP.Size = new System.Drawing.Size(106, 27);
+            this.btnCEP.TabIndex = 28;
+            this.btnCEP.Text = "Consultar";
+            this.btnCEP.UseVisualStyleBackColor = true;
+            this.btnCEP.Click += new System.EventHandler(this.btnCEP_Click);
             // 
             // cbUF
             // 
@@ -474,6 +484,7 @@
             this.btnPesquisar.TabIndex = 6;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtPesquisar
             // 
@@ -481,6 +492,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(371, 29);
             this.txtPesquisar.TabIndex = 5;
+            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
             // 
             // label16
             // 
@@ -504,6 +516,7 @@
             this.btnNovo.TabIndex = 2;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
@@ -523,7 +536,7 @@
             this.btnExcluir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(560, 510);
+            this.btnExcluir.Location = new System.Drawing.Point(698, 510);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(132, 44);
             this.btnExcluir.TabIndex = 4;
@@ -536,23 +549,13 @@
             this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(698, 510);
+            this.btnEditar.Location = new System.Drawing.Point(560, 510);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(132, 44);
             this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnCEP
-            // 
-            this.btnCEP.Location = new System.Drawing.Point(834, 24);
-            this.btnCEP.Name = "btnCEP";
-            this.btnCEP.Size = new System.Drawing.Size(106, 27);
-            this.btnCEP.TabIndex = 28;
-            this.btnCEP.Text = "Consultar";
-            this.btnCEP.UseVisualStyleBackColor = true;
-            this.btnCEP.Click += new System.EventHandler(this.btnCEP_Click);
             // 
             // FrmClientes
             // 

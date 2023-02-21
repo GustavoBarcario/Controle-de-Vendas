@@ -149,6 +149,72 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
         }
         #endregion
 
+        #region Buscar Cliente Por Nome
+        public DataTable buscarClientePorNome(string nome)
+        {
+            try
+            {
+                DataTable tabeleCliente = new DataTable();
+                string sql = "select * from tb_clientes where nome = @nome";
+
+                SqlCommand executacmd = new SqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                
+
+                SqlDataAdapter da = new SqlDataAdapter(executacmd);
+                da.Fill(tabeleCliente);
+                conexao.Close();
+                return tabeleCliente;
+                
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando no SQL" + erro);
+                return null;
+            }
+        }
+        #endregion
+
+        #region Buscar Cliente Por Nome
+        public DataTable ListarClientePorNome(string nome)
+        {
+            try
+            {
+                DataTable tabeleCliente = new DataTable();
+                string sql = "select * from tb_clientes where nome like @nome";
+
+                SqlCommand executacmd = new SqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+
+                SqlDataAdapter da = new SqlDataAdapter(executacmd);
+                da.Fill(tabeleCliente);
+                conexao.Close();
+                return tabeleCliente;
+
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando no SQL" + erro);
+                return null;
+            }
+        }
+        #endregion
+
 
     }
 }

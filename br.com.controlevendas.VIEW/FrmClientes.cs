@@ -49,9 +49,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            string conteudo = mskCPF.Text;
-            conteudo = conteudo.Replace(",", ".");
-            mskCPF.Text = conteudo;
+            txtNome.Select();
 
             ClienteDAO dao = new ClienteDAO();
 
@@ -143,6 +141,40 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
             {
                 MessageBox.Show("Informe um CEP válido!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string nome = txtPesquisar.Text;
+            ClienteDAO dao = new ClienteDAO();
+
+            dgvCliente.DataSource = dao.buscarClientePorNome(nome);
+
+            if (dgvCliente.Rows.Count == 0)
+            {
+                dgvCliente.DataSource = dao.listarClientes();
+            }
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string nome = "%" + txtPesquisar.Text + "%";
+
+            ClienteDAO dao = new ClienteDAO();
+
+            dgvCliente.DataSource = dao.ListarClientePorNome(nome);
+
+            if (dgvCliente.Rows.Count == 0)
+            {
+                dgvCliente.DataSource = dao.listarClientes();
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            new Helpers().LimparTela(this);
+
+            txtNome.Select();
         }
     }
 }
