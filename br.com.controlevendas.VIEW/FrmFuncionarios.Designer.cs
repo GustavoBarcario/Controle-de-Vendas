@@ -1,6 +1,6 @@
-﻿namespace Controle_de_Vendas.br.com.controlevendas.VIEW
+﻿namespace Controle_de_Vendas.br.com.controlevendas.view
 {
-    partial class FrmClientes
+    partial class FrmFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -47,29 +47,29 @@
             this.label10 = new System.Windows.Forms.Label();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.mskRG = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.mskRG = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,7 +85,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1143, 157);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -94,20 +94,20 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(37, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(342, 38);
+            this.label1.Size = new System.Drawing.Size(397, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Clientes";
+            this.label1.Text = "Cadastro de Funcionario";
             // 
             // tabClientes
             // 
             this.tabClientes.Controls.Add(this.tabPage1);
             this.tabClientes.Controls.Add(this.tabPage2);
             this.tabClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabClientes.Location = new System.Drawing.Point(-1, 164);
+            this.tabClientes.Location = new System.Drawing.Point(0, 163);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.SelectedIndex = 0;
             this.tabClientes.Size = new System.Drawing.Size(1143, 361);
-            this.tabClientes.TabIndex = 1;
+            this.tabClientes.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -154,10 +154,9 @@
             this.btnCEP.Location = new System.Drawing.Point(834, 26);
             this.btnCEP.Name = "btnCEP";
             this.btnCEP.Size = new System.Drawing.Size(106, 29);
-            this.btnCEP.TabIndex = 8;
+            this.btnCEP.TabIndex = 28;
             this.btnCEP.Text = "Consultar";
             this.btnCEP.UseVisualStyleBackColor = true;
-            this.btnCEP.Click += new System.EventHandler(this.btnCEP_Click);
             // 
             // cbUF
             // 
@@ -193,7 +192,7 @@
             this.cbUF.Location = new System.Drawing.Point(685, 177);
             this.cbUF.Name = "cbUF";
             this.cbUF.Size = new System.Drawing.Size(145, 29);
-            this.cbUF.TabIndex = 14;
+            this.cbUF.TabIndex = 27;
             // 
             // label15
             // 
@@ -211,7 +210,7 @@
             this.txtCidade.Location = new System.Drawing.Point(685, 125);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(145, 27);
-            this.txtCidade.TabIndex = 10;
+            this.txtCidade.TabIndex = 25;
             // 
             // label14
             // 
@@ -229,7 +228,7 @@
             this.txtBairro.Location = new System.Drawing.Point(945, 123);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(145, 27);
-            this.txtBairro.TabIndex = 11;
+            this.txtBairro.TabIndex = 23;
             // 
             // label13
             // 
@@ -247,7 +246,7 @@
             this.txtComplemento.Location = new System.Drawing.Point(685, 225);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(145, 27);
-            this.txtComplemento.TabIndex = 15;
+            this.txtComplemento.TabIndex = 21;
             // 
             // label12
             // 
@@ -265,7 +264,7 @@
             this.txtNumero.Location = new System.Drawing.Point(945, 160);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(145, 27);
-            this.txtNumero.TabIndex = 13;
+            this.txtNumero.TabIndex = 19;
             // 
             // label11
             // 
@@ -283,7 +282,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(685, 75);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(394, 27);
-            this.txtEndereco.TabIndex = 9;
+            this.txtEndereco.TabIndex = 17;
             // 
             // label10
             // 
@@ -302,7 +301,7 @@
             this.mskCEP.Mask = "00000-999";
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(135, 27);
-            this.mskCEP.TabIndex = 7;
+            this.mskCEP.TabIndex = 15;
             // 
             // label9
             // 
@@ -314,6 +313,136 @@
             this.label9.Size = new System.Drawing.Size(56, 22);
             this.label9.TabIndex = 14;
             this.label9.Text = "CEP: ";
+            // 
+            // mskCelular
+            // 
+            this.mskCelular.Location = new System.Drawing.Point(114, 210);
+            this.mskCelular.Mask = "(99) 9 9999-9999";
+            this.mskCelular.Name = "mskCelular";
+            this.mskCelular.Size = new System.Drawing.Size(135, 27);
+            this.mskCelular.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.Location = new System.Drawing.Point(19, 210);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 22);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Celular: ";
+            // 
+            // mskTelefone
+            // 
+            this.mskTelefone.Location = new System.Drawing.Point(114, 160);
+            this.mskTelefone.Mask = "(99) 9999-9999";
+            this.mskTelefone.Name = "mskTelefone";
+            this.mskTelefone.Size = new System.Drawing.Size(135, 27);
+            this.mskTelefone.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label7.Location = new System.Drawing.Point(6, 162);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 22);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Telefone: ";
+            // 
+            // mskCPF
+            // 
+            this.mskCPF.Location = new System.Drawing.Point(361, 209);
+            this.mskCPF.Mask = "###,###,###-##";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(120, 27);
+            this.mskCPF.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(297, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 22);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "CPF: ";
+            // 
+            // mskRG
+            // 
+            this.mskRG.Location = new System.Drawing.Point(361, 165);
+            this.mskRG.Mask = "##,###,###";
+            this.mskRG.Name = "mskRG";
+            this.mskRG.Size = new System.Drawing.Size(120, 27);
+            this.mskRG.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label5.Location = new System.Drawing.Point(303, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 22);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "RG: ";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(114, 114);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(371, 27);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(42, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 22);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Email: ";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(114, 70);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(371, 27);
+            this.txtNome.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(33, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nome: ";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(114, 27);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 27);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(20, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Codigo: ";
             // 
             // tabPage2
             // 
@@ -341,7 +470,6 @@
             this.dgvCliente.RowTemplate.Height = 24;
             this.dgvCliente.Size = new System.Drawing.Size(1119, 243);
             this.dgvCliente.TabIndex = 7;
-            this.dgvCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             // 
             // btnPesquisar
             // 
@@ -354,7 +482,6 @@
             this.btnPesquisar.TabIndex = 6;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtPesquisar
             // 
@@ -362,7 +489,6 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(371, 29);
             this.txtPesquisar.TabIndex = 5;
-            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
             // 
             // label16
             // 
@@ -375,31 +501,17 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Nome: ";
             // 
-            // btnNovo
+            // btnEditar
             // 
-            this.btnNovo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNovo.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.ForeColor = System.Drawing.Color.White;
-            this.btnNovo.Location = new System.Drawing.Point(284, 542);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(132, 47);
-            this.btnNovo.TabIndex = 17;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = false;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(422, 542);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(132, 47);
-            this.btnSalvar.TabIndex = 16;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(560, 542);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(132, 47);
+            this.btnEditar.TabIndex = 9;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
             // 
@@ -409,155 +521,35 @@
             this.btnExcluir.Location = new System.Drawing.Point(698, 542);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(132, 47);
-            this.btnExcluir.TabIndex = 19;
+            this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btnEditar
+            // btnSalvar
             // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(560, 542);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(132, 47);
-            this.btnEditar.TabIndex = 18;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(422, 542);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(132, 47);
+            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // btnNovo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(20, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Codigo: ";
+            this.btnNovo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.Location = new System.Drawing.Point(284, 542);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(132, 47);
+            this.btnNovo.TabIndex = 6;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(114, 27);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 27);
-            this.txtCodigo.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(33, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nome: ";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(114, 70);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(371, 27);
-            this.txtNome.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(42, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 22);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Email: ";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(114, 114);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(371, 27);
-            this.txtEmail.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(303, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 22);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "RG: ";
-            // 
-            // mskRG
-            // 
-            this.mskRG.Location = new System.Drawing.Point(361, 165);
-            this.mskRG.Mask = "##,###,###";
-            this.mskRG.Name = "mskRG";
-            this.mskRG.Size = new System.Drawing.Size(120, 27);
-            this.mskRG.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(297, 210);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 22);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "CPF: ";
-            // 
-            // mskCPF
-            // 
-            this.mskCPF.Location = new System.Drawing.Point(361, 209);
-            this.mskCPF.Mask = "###,###,###-##";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(120, 27);
-            this.mskCPF.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(6, 162);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 22);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Telefone: ";
-            // 
-            // mskTelefone
-            // 
-            this.mskTelefone.Location = new System.Drawing.Point(114, 160);
-            this.mskTelefone.Mask = "(99) 9999-9999";
-            this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(135, 27);
-            this.mskTelefone.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(19, 210);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 22);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Celular: ";
-            // 
-            // mskCelular
-            // 
-            this.mskCelular.Location = new System.Drawing.Point(114, 210);
-            this.mskCelular.Mask = "(99) 9 9999-9999";
-            this.mskCelular.Name = "mskCelular";
-            this.mskCelular.Size = new System.Drawing.Size(135, 27);
-            this.mskCelular.TabIndex = 4;
-            // 
-            // FrmClientes
+            // FrmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -569,10 +561,9 @@
             this.Controls.Add(this.tabClientes);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "FrmClientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Clientes";
-            this.Load += new System.EventHandler(this.FrmClientes_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "FrmFuncionarios";
+            this.Text = "Cadastro de Funcionários";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabClientes.ResumeLayout(false);
@@ -591,30 +582,21 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.MaskedTextBox mskCEP;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnCEP;
+        private System.Windows.Forms.ComboBox cbUF;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cbUF;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnCEP;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox mskCEP;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
@@ -629,5 +611,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnNovo;
     }
 }

@@ -9,3 +9,4 @@ C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\bin\Debug\Control
 C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\bin\Debug\Controle de Vendas.exe
 C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\obj\Debug\Controle de Vendas.csproj.SuggestedBindingRedirects.cache
 C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\obj\Debug\Controle de Vendas.exe
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\obj\Debug\Controle_de_Vendas.br.com.controlevendas.view.FrmFuncionarios.resources

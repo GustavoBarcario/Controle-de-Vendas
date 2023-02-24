@@ -16,7 +16,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
             this.conexao = new ConnectionFactory().GetSqlConnection();
         }
 
-        #region CadastrarCliente
+        #region Cadastrar Cliente
 
         public void cadastrarCliente(Cliente obj)
         {

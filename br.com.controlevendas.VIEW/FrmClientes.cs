@@ -25,26 +25,32 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Cliente obj = new Cliente();
-            obj.nome = txtNome.Text;
-            obj.rg = mskRG.Text;
-            obj.cpf = mskCPF.Text;
-            obj.email = txtEmail.Text;
-            obj.telefone = mskTelefone.Text;
-            obj.celular = mskCelular.Text;
-            obj.cep = mskCEP.Text;
-            obj.endereco = txtEndereco.Text;
-            obj.numero = int.Parse(txtNumero.Text);
-            obj.complemento= txtComplemento.Text;
-            obj.bairro = txtBairro.Text;
-            obj.cidade = txtCidade.Text;
-            obj.estado = cbUF.Text;
+            if (int.TryParse(txtNumero.Text, out int numero))
+            {
+                Cliente obj = new Cliente();
+                obj.nome = txtNome.Text;
+                obj.rg = mskRG.Text;
+                obj.cpf = mskCPF.Text;
+                obj.email = txtEmail.Text;
+                obj.telefone = mskTelefone.Text;
+                obj.celular = mskCelular.Text;
+                obj.cep = mskCEP.Text;
+                obj.endereco = txtEndereco.Text;
+                obj.numero = int.Parse(txtNumero.Text);
+                obj.complemento = txtComplemento.Text;
+                obj.bairro = txtBairro.Text;
+                obj.cidade = txtCidade.Text;
+                obj.estado = cbUF.Text;
 
-            ClienteDAO dao = new ClienteDAO();
-            dao.cadastrarCliente(obj);
+                ClienteDAO dao = new ClienteDAO();
+                dao.cadastrarCliente(obj);
 
-            dgvCliente.DataSource = dao.listarClientes();
-
+                dgvCliente.DataSource = dao.listarClientes();
+            }
+            else
+            {
+                MessageBox.Show("Não é possivel colocar número como TEXTO\nCaso queira deixar sem numero digite 0", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)
@@ -56,6 +62,39 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
             dgvCliente.DataSource = dao.listarClientes();
 
 
+        #region Cores no Botão 
+
+        //    Color highlightBlue = ColorTranslator.FromHtml("#0078D7");
+
+
+        //    // Adiciona o manipulador de eventos GotFocus a vários botões do formulário
+        //    btnSalvar.GotFocus += btn_GotFocus;
+        //    btnNovo.GotFocus += btn_GotFocus;
+        //    btnEditar.GotFocus += btn_GotFocus;
+        //    btnExcluir.GotFocus += btn_GotFocus;
+
+        //    // Adiciona o manipulador de eventos LostFocus a vários botões do formulário
+        //    btnSalvar.LostFocus += btn_LostFocus;
+        //    btnNovo.LostFocus += btn_LostFocus;
+        //    btnEditar.LostFocus += btn_LostFocus;
+        //    btnExcluir.LostFocus += btn_LostFocus;
+        //}
+
+        //private void btn_GotFocus(object sender, EventArgs e)
+        //{
+        //    // Altera a cor de fundo do botão quando ele ganha o foco
+        //    Button btn = (Button)sender;
+        //    btn.BackColor = Color.LightBlue;
+        //    btn.ForeColor = Color.Black;
+        //}
+
+        //private void btn_LostFocus(object sender, EventArgs e)
+        //{
+        //    // Restaura a cor de fundo do botão quando ele perde o foco
+        //    Button btn = (Button)sender;
+        //    btn.BackColor = ColorTranslator.FromHtml("#0078D7");
+        //    btn.ForeColor = Color.White;
+        #endregion
         }
 
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -81,17 +120,36 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Cliente obj = new Cliente();
-            obj.codigo = int.Parse(txtCodigo.Text);
+            if (int.TryParse(txtCodigo.Text, out int codigo))
+            {
+                Cliente obj = new Cliente();
+                obj.codigo = int.Parse(txtCodigo.Text);
 
-            ClienteDAO dao = new ClienteDAO();
-            dao.exluirCliente(obj);
-            
-            dgvCliente.DataSource = dao.listarClientes();
+                ClienteDAO dao = new ClienteDAO();
+                dao.exluirCliente(obj);
+
+                dgvCliente.DataSource = dao.listarClientes();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum Cadastro Selecionado", "Erro 404", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtCodigo.Text))
+            {
+                MessageBox.Show("Nenhum Cadastro Selecionado", "Erro 404", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!int.TryParse(txtNumero.Text, out int numero))
+            {
+                MessageBox.Show("Numero Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
             Cliente obj = new Cliente();
             obj.nome = txtNome.Text;
             obj.rg = mskRG.Text;
@@ -113,6 +171,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.VIEW
             dao.alterarCliente(obj);
 
             dgvCliente.DataSource = dao.listarClientes();
+            }
         }
 
         private void btnCEP_Click(object sender, EventArgs e)

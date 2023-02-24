@@ -1,4 +1,5 @@
-﻿using Controle_de_Vendas.br.com.controlevendas.VIEW;
+﻿using Controle_de_Vendas.br.com.controlevendas.view;
+using Controle_de_Vendas.br.com.controlevendas.VIEW;
 using System;
 using System.Collections.Generic;
 using System.Linq;
