@@ -72,7 +72,9 @@
   <ItemGroup>
     <Compile Include="br.com.controlevendas.conexao\ConnectionFactory.cs" />
     <Compile Include="br.com.controlevendas.dao\ClienteDAO.cs" />
+    <Compile Include="br.com.controlevendas.dao\FuncionarioDAO.cs" />
     <Compile Include="br.com.controlevendas.model\Cliente.cs" />
+    <Compile Include="br.com.controlevendas.model\Funcionario.cs" />
     <Compile Include="br.com.controlevendas.model\Helpers.cs" />
     <Compile Include="br.com.controlevendas.view\FrmClientes.cs">
       <SubType>Form</SubType>
