@@ -10,3 +10,15 @@ C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\bin\Debug\Control
 C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\obj\Debug\Controle de Vendas.csproj.SuggestedBindingRedirects.cache
 C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\obj\Debug\Controle de Vendas.exe
 C:\Users\gusta\OneDrive\Documentos\Projetos\Controle de Vendas\obj\Debug\Controle_de_Vendas.br.com.controlevendas.view.FrmFuncionarios.resources
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\bin\Debug\Controle de Vendas.exe.config
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\bin\Debug\Controle de Vendas.exe
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\bin\Debug\Controle de Vendas.pdb
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle de Vendas.csproj.AssemblyReference.cache
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle de Vendas.csproj.SuggestedBindingRedirects.cache
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle_de_Vendas.br.com.controlevendas.VIEW.FrmClientes.resources
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle_de_Vendas.br.com.controlevendas.view.FrmFuncionarios.resources
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle_de_Vendas.Properties.Resources.resources
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle de Vendas.csproj.GenerateResource.cache
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle de Vendas.csproj.CoreCompileInputs.cache
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle de Vendas.exe
+C:\Users\gusta\OneDrive\Documentos\Projetos\Controle-de-Vendas\obj\Debug\Controle de Vendas.pdb

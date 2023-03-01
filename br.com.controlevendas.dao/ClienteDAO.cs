@@ -127,7 +127,7 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
         {
             try
             {
-                DataTable tabeleCliente = new DataTable();
+                DataTable tabelaCliente = new DataTable();
                 string sql = "select * from tb_clientes";
 
                 SqlCommand executacmd = new SqlCommand(sql, conexao);
@@ -135,8 +135,11 @@ namespace Controle_de_Vendas.br.com.controlevendas.dao
                 executacmd.ExecuteNonQuery();
 
                 SqlDataAdapter da = new SqlDataAdapter(executacmd);
-                da.Fill(tabeleCliente);
-                return tabeleCliente;
+                da.Fill(tabelaCliente);
+
+                conexao.Close();
+
+                return tabelaCliente;
                 
 
             }
